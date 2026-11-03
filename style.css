@@ -171,9 +171,7 @@ h1 { margin: 0; font-size: clamp(42px, 8vw, 72px); line-height: 1.02; letter-spa
   background: color-mix(in srgb, var(--surface) 85%, transparent);
   border: 1px solid var(--line); border-radius: var(--radius);
   padding: 18px 18px 16px; box-shadow: var(--shadow);
-  transition: transform .25s ease, box-shadow .25s ease;
 }
-.stat:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
 .num {
   display: block; font-size: clamp(40px, 6vw, 56px); line-height: 1; font-weight: 800; letter-spacing: -1px;
   font-variant-numeric: tabular-nums;
