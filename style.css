@@ -93,13 +93,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
 }
 .top-inner { display: flex; align-items: center; gap: 20px; height: 60px; }
-.brand {
-  display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--accent-ink);
-  font-weight: 800; font-size: 14px; letter-spacing: .5px; text-decoration: none;
-  transition: transform .3s cubic-bezier(.2, .9, .3, 1.4);
-}
-.brand:hover { transform: rotate(-8deg) scale(1.08); }
 nav { display: flex; gap: 22px; margin-left: auto; }
 nav a { position: relative; color: var(--muted); text-decoration: none; font-size: 15px; padding: 4px 0; }
 nav a::after {
