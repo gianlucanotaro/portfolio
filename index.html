@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gianluca Notaro · Software Engineer</title>
+<meta name="description" content="Gianluca Notaro, software engineer and solution architect in Aarau, Switzerland. Java/Spring, React, Go, LLM integration.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Pick the language before first paint so there's no flash of the wrong one:
+  // ?lang= wins, then the saved choice, then the browser's language.
+  (function () {
+    var lang = new URLSearchParams(location.search).get('lang');
+    if (lang !== 'en' && lang !== 'de') {
+      try { lang = localStorage.getItem('lang'); } catch (e) { lang = null; }
+    }
+    if (lang !== 'en' && lang !== 'de') {
+      lang = /^de\b/i.test(navigator.language || '') ? 'de' : 'en';
+    }
+    document.documentElement.lang = lang;
+    document.documentElement.dataset.lang = lang;
+  })();
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="#">GN</a>
+    <nav aria-label="Sections">
+      <a href="#projects"><span lang="en">Projects</span><span lang="de">Projekte</span></a>
+      <a href="#experience"><span lang="en">Experience</span><span lang="de">Erfahrung</span></a>
+      <a href="#skills"><span lang="en">Skills</span><span lang="de">Skills</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="de">Kontakt</span></a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Language / Sprache">
+      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-set-lang="de" aria-pressed="false">DE</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero wrap">
+  <p class="eyebrow"><span lang="en">Aarau, Switzerland</span><span lang="de">Aarau, Schweiz</span></p>
+  <h1>Gianluca Notaro</h1>
+  <p class="role">Software Engineer · Solution Architect</p>
+  <p class="lead" lang="en">I build KPI dashboards and data solutions for banks and financial firms at Skoor. In my own time I build and run web apps on my own server, from the Go backend to single sign-on and automatic deploys.</p>
+  <p class="lead" lang="de">Bei Skoor baue ich KPI-Dashboards und Datenlösungen für Banken und Finanzunternehmen. In meiner Freizeit entwickle und betreibe ich Web-Apps auf meinem eigenen Server, vom Go-Backend bis zu Single Sign-on und automatischen Deployments.</p>
+  <div class="actions">
+    <a class="btn primary" href="mailto:contact@gianlucanotaro.com"><span lang="en">Get in touch</span><span lang="de">Kontakt aufnehmen</span></a>
+    <a class="btn" href="cv/Gianluca_Notaro_CV_EN.pdf" download><span lang="en">Download CV (PDF)</span><span lang="de">Lebenslauf (PDF, Englisch)</span></a>
+  </div>
+  <ul class="facts">
+    <li><b>5+</b> <span lang="en">years in software</span><span lang="de">Jahre in der Softwareentwicklung</span></li>
+    <li><b>4</b> <span lang="en">sectors: banking, finance, telecom, EdTech</span><span lang="de">Branchen: Banken, Finanz, Telekom, EdTech</span></li>
+    <li><b>4</b> <span lang="en">languages: DE, IT, EN, FR</span><span lang="de">Sprachen: DE, IT, EN, FR</span></li>
+  </ul>
+</section>
+
+<section id="projects" class="wrap">
+  <h2><span lang="en">Projects</span><span lang="de">Projekte</span></h2>
+  <p class="section-note" lang="en">Things I build and run in my own time. The code is private; I'm happy to show it, or give you a demo login, on request.</p>
+  <p class="section-note" lang="de">Was ich in meiner Freizeit baue und betreibe. Der Code ist privat; auf Anfrage zeige ich ihn gern oder gebe einen Demo-Zugang.</p>
+
+  <div class="cards">
+    <article class="card">
+      <div class="card-head">
+        <h3>Wardy</h3>
+        <span class="tag"><span lang="en">In daily use</span><span lang="de">Täglich im Einsatz</span></span>
+      </div>
+      <p lang="en">A digital wardrobe. Photograph your clothes, AI tags them, and you get outfit suggestions for the weather, the occasion and your mood. You can ask in your own words, like "a fit with a red top".</p>
+      <p lang="de">Ein digitaler Kleiderschrank. Kleider fotografieren, die KI taggt sie, und man bekommt Outfit-Vorschläge passend zu Wetter, Anlass und Stimmung. Wünsche gehen auch in eigenen Worten, etwa «ein Outfit mit rotem Oberteil».</p>
+      <ul lang="en">
+        <li>Rules pre-filter, then Claude picks outfits; every returned ID is validated, with a rules-only fallback when the AI is down</li>
+        <li>Monthly AI budget, per-user daily caps and usage logging</li>
+        <li>Style profile built from inspiration photos, which steers the suggestions</li>
+        <li>Photos stripped of location data, served only to their owner</li>
+      </ul>
+      <ul lang="de">
+        <li>Regel-Vorfilter, danach wählt Claude die Outfits; jede zurückgegebene ID wird geprüft, mit Fallback auf reine Regeln, wenn die KI nicht erreichbar ist</li>
+        <li>Monatliches KI-Budget, Tageslimiten pro Nutzer und Kosten-Logging</li>
+        <li>Stilprofil aus Inspirationsfotos, das die Vorschläge lenkt</li>
+        <li>Fotos ohne Standortdaten, nur für den Besitzer sichtbar</li>
+      </ul>
+      <p class="stack">Go · React · TypeScript · SQLite · Claude API · OIDC · PWA</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3><span lang="en">Self-hosted platform</span><span lang="de">Eigene Server-Plattform</span></h3>
+        <span class="tag"><span lang="en">Running</span><span lang="de">In Betrieb</span></span>
+      </div>
+      <p lang="en">A small Linux server that runs all my apps and a few open-source ones (recipes, documents, dashboard) for two people, on 4 GB of RAM.</p>
+      <p lang="de">Ein kleiner Linux-Server, auf dem alle meine Apps und einige Open-Source-Apps (Rezepte, Dokumente, Dashboard) für zwei Personen laufen, mit 4 GB RAM.</p>
+      <ul lang="en">
+        <li>One login for every app: single sign-on with Authelia over OpenID Connect</li>
+        <li>Caddy as reverse proxy with automatic HTTPS</li>
+        <li>Podman containers and systemd units with memory limits, so no app can take the server down</li>
+        <li>Merge to main and it deploys itself: test, build, back up the database, restart, health check</li>
+      </ul>
+      <ul lang="de">
+        <li>Ein Login für alle Apps: Single Sign-on mit Authelia über OpenID Connect</li>
+        <li>Caddy als Reverse Proxy mit automatischem HTTPS</li>
+        <li>Podman-Container und systemd-Units mit Speicherlimiten, damit keine App den Server lahmlegt</li>
+        <li>Merge auf main, und es deployt sich selbst: Tests, Build, Datenbank-Backup, Neustart, Health-Check</li>
+      </ul>
+      <p class="stack">Linux · Podman · systemd · Caddy · Authelia · OIDC</p>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <h3><span lang="en">Training app</span><span lang="de">Trainings-App</span></h3>
+        <span class="tag"><span lang="en">New</span><span lang="de">Neu</span></span>
+      </div>
+      <p lang="en">A phone app for calisthenics: it shows today's workout, counts reps and times holds, and logs every set, even offline at the park.</p>
+      <p lang="de">Eine Handy-App fürs Calisthenics-Training: Sie zeigt das heutige Workout, zählt Wiederholungen, stoppt Halteübungen und speichert jeden Satz, auch offline im Park.</p>
+      <ul lang="en">
+        <li>Sets are queued on the phone and synced once online, without duplicates</li>
+        <li>Training plans as plain YAML files, easy to edit by hand</li>
+        <li>Under 30 MB of RAM on the server</li>
+      </ul>
+      <ul lang="de">
+        <li>Sätze werden auf dem Handy zwischengespeichert und online ohne Duplikate synchronisiert</li>
+        <li>Trainingspläne als einfache YAML-Dateien, von Hand bearbeitbar</li>
+        <li>Unter 30 MB RAM auf dem Server</li>
+      </ul>
+      <p class="stack">Go · SQLite · JavaScript · PWA · Service Worker</p>
+    </article>
+  </div>
+</section>
+
+<section id="experience" class="wrap">
+  <h2><span lang="en">Experience</span><span lang="de">Erfahrung</span></h2>
+  <ol class="timeline">
+    <li>
+      <div class="when">04.2024 – <span lang="en">present</span><span lang="de">heute</span></div>
+      <div class="what">
+        <h3>Solution Architect / Software Engineer <span class="org">· Skoor AG</span></h3>
+        <p class="muted" lang="en">Dashboard software for visualising business KPIs.</p>
+        <p class="muted" lang="de">Dashboard-Software zur Visualisierung von Business-KPIs.</p>
+        <ul lang="en">
+          <li>Co-develop the core product</li>
+          <li>Build tailored KPI dashboards for customers in banking and finance, from requirements workshop to go-live</li>
+          <li>Won a major German telecom provider as a customer with a working prototype for requirements the product didn't yet cover</li>
+          <li>Designed and built an ESG reporting solution on the platform on my own</li>
+          <li>Connect customer data sources and APIs, and advise customers on integration</li>
+        </ul>
+        <ul lang="de">
+          <li>Mitentwicklung des Kernprodukts</li>
+          <li>Massgeschneiderte KPI-Dashboards für Kunden aus Banken und Finanz, vom Anforderungsworkshop bis zum Go-live</li>
+          <li>Einen grossen deutschen Telekom-Anbieter als Kunden gewonnen, mit einem funktionierenden Prototyp für Anforderungen, die das Produkt noch nicht abdeckte</li>
+          <li>Eine ESG-Reporting-Lösung auf der Plattform eigenständig konzipiert und umgesetzt</li>
+          <li>Anbindung von Kunden-Datenquellen und APIs sowie Beratung bei der Integration</li>
+        </ul>
+        <p class="stack">Java · Spring · React · Python · Kubernetes · Docker</p>
+      </div>
+    </li>
+    <li>
+      <div class="when">11.2023 – 04.2024</div>
+      <div class="what">
+        <h3><span lang="en">Sabbatical and further training</span><span lang="de">Auszeit und Weiterbildung</span></h3>
+        <p lang="en">Courses in Spring Boot and Angular; web projects for private clients.</p>
+        <p lang="de">Kurse in Spring Boot und Angular; Webprojekte für private Kunden.</p>
+      </div>
+    </li>
+    <li>
+      <div class="when">12.2022 – 10.2023</div>
+      <div class="what">
+        <h3>Software Engineer Consultant <span class="org">· Cleo AG</span></h3>
+        <ul lang="en">
+          <li><b>Full-Stack Developer at nu.</b> (Cleo group, EdTech), 02.2023 – 10.2023: a learning platform for schools on which teachers use AI (OpenAI) to create personalised learning content. Spring Boot microservices, React frontends, CI/CD with Jenkins and OpenShift</li>
+          <li>Short client assignments: mobile banking app testing and release for a Swiss bank; test engineering for a Swiss network operator</li>
+        </ul>
+        <ul lang="de">
+          <li><b>Full-Stack Developer bei nu.</b> (Cleo-Gruppe, EdTech), 02.2023 – 10.2023: eine Lernplattform für Schulen, auf der Lehrpersonen mit KI (OpenAI) individuelle Lerninhalte erstellen. Spring-Boot-Microservices, React-Frontends, CI/CD mit Jenkins und OpenShift</li>
+          <li>Kurze Kundeneinsätze: Test und Release von Mobile-Banking-Apps für eine Schweizer Bank; Test Engineering für einen Schweizer Netzbetreiber</li>
+        </ul>
+        <p class="stack">Java · Spring Boot · React · TypeScript · OpenAI API · Jenkins · OpenShift</p>
+      </div>
+    </li>
+    <li>
+      <div class="when">05.2022 – 10.2022</div>
+      <div class="what">
+        <h3>Solution Developer / Architect <span class="org">· Aclevion</span></h3>
+        <p lang="en">Custom solutions on the censhare platform, a GitLab CI/CD pipeline, and image recognition for print media.</p>
+        <p lang="de">Kundenlösungen auf der censhare-Plattform, eine GitLab-CI/CD-Pipeline und Bilderkennung für Printmedien.</p>
+        <p class="stack">Java · Spring · Angular · XSLT · GitLab CI</p>
+      </div>
+    </li>
+    <li>
+      <div class="when">04.2021 – 01.2022</div>
+      <div class="what">
+        <h3>QA Software Engineer <span class="org">· Exense</span></h3>
+        <p lang="en">Test automation with Selenium and Cypress for the company's own product; ran the client test platform.</p>
+        <p lang="de">Testautomatisierung mit Selenium und Cypress für das eigene Produkt; Betreuung der Kunden-Testplattform.</p>
+        <p class="stack">Java · Angular · Step · Cypress · Selenium · Appium</p>
+      </div>
+    </li>
+  </ol>
+
+  <h3 class="sub-h"><span lang="en">Education</span><span lang="de">Ausbildung</span></h3>
+  <ul class="edu">
+    <li><span class="when">2016 – 2020</span> <span><b>BSc Computer Science</b> · FHNW</span></li>
+    <li><span class="when">2015 – 2016</span> <span><b lang="en">Vocational baccalaureate</b><b lang="de">Berufsmaturität</b> · Berufsschule Aarau</span></li>
+    <li><span class="when">2011 – 2015</span> <span><b lang="en">Electronics apprenticeship</b><b lang="de">Lehre als Elektroniker</b> · libs (ABB)</span></li>
+  </ul>
+</section>
+
+<section id="skills" class="wrap">
+  <h2><span lang="en">Skills</span><span lang="de">Skills</span></h2>
+  <dl class="skills">
+    <div><dt>Backend</dt><dd>Java / Spring Boot · Python · Go · SQL · REST APIs</dd></div>
+    <div><dt>Frontend</dt><dd>React · Angular · TypeScript · HTML/CSS</dd></div>
+    <div><dt>DevOps</dt><dd>Kubernetes · Docker / Podman · Jenkins · GitLab CI · OpenShift · Linux · Git</dd></div>
+    <div><dt>Testing</dt><dd>Cypress · Selenium · Appium · <span lang="en">test automation</span><span lang="de">Testautomatisierung</span></dd></div>
+    <div><dt><span lang="en">AI</span><span lang="de">KI</span></dt><dd><span lang="en">LLM integration (OpenAI, Claude API) · AI-assisted development</span><span lang="de">LLM-Integration (OpenAI, Claude API) · KI-gestützte Entwicklung</span></dd></div>
+    <div><dt><span lang="en">Languages</span><span lang="de">Sprachen</span></dt><dd><span lang="en">German and Italian (native) · English (C2) · French (B2)</span><span lang="de">Deutsch und Italienisch (Muttersprache) · Englisch (C2) · Französisch (B2)</span></dd></div>
+  </dl>
+</section>
+
+<section id="contact" class="wrap contact">
+  <h2><span lang="en">Contact</span><span lang="de">Kontakt</span></h2>
+  <p lang="en">Looking for a software engineer who can talk to customers and build what they need? Write me.</p>
+  <p lang="de">Sie suchen einen Software Engineer, der mit Kunden spricht und baut, was sie brauchen? Schreiben Sie mir.</p>
+  <a class="mail" href="mailto:contact@gianlucanotaro.com">contact@gianlucanotaro.com</a>
+</section>
+
+</main>
+
+<footer class="wrap foot">
+  <span>© 2026 Gianluca Notaro</span>
+  <span lang="en">Aarau, Switzerland</span><span lang="de">Aarau, Schweiz</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
